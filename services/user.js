@@ -2,7 +2,8 @@ var supabase = require('../_helpers/config');
 const fs = require('fs');
 const cloudinary = require('./../_helpers/cloudinaryConfig');
 const mqtt = require('mqtt');
-const client = mqtt.connect('mqtt://broker.hivemq.com');
+// const client = mqtt.connect('mqtt://broker.hivemq.com');
+const client = mqtt.connect('mqtts://broker.hivemq.com');
 
 async function testing(req, res, next) {
     res.status(200).json({ message: 'hi' });
